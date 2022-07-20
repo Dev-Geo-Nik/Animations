@@ -1,0 +1,737 @@
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+  
+}
+
+/* General link styles */
+a{
+    text-decoration:none;
+    display: inline-block;
+    font-size: 1.5rem;
+    border :5px solid #272727;
+    padding:20px 60px;
+    color:#272727;
+}
+
+.buttonsContainer{
+    margin:2rem 8rem 0 8rem;
+
+    
+}
+
+.buttonsContainer h2 {
+    text-align:center;
+}
+.buttonsGroup{
+  
+    /* background-color:red; */
+    flex-wrap: wrap;
+    height: 100%;
+    gap: 1rem;
+    display:flex;
+    justify-content:space-around;
+}
+
+
+
+.btn1{
+    /* font-size: 1.5rem;
+    border :5px solid #272727;
+    padding:20px 60px; */
+    /* color:#272727; */
+    position: relative;
+    overflow: hidden;
+}
+
+.btn1:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background:yellow;
+    transform-origin: bottom left;
+    transform:rotate(-90deg);
+    transition: transform  1s;
+  
+}
+
+.btn1:hover:before{
+    transform:rotate(0deg);
+
+}
+
+
+
+
+.btn2{
+    position: relative;
+    overflow: hidden;
+    
+}
+
+.btn2:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: purple;
+    z-index:-1;
+    transition: all 1s;
+    transform: translateX(-100%);
+   
+}
+
+.btn2:hover:before{
+    transform: translateX(0);
+    
+}
+
+.btn2:hover{
+    color: white;
+    transition:color 1s ease-in-out;
+}
+
+
+
+.btn3{
+    position: relative;
+}
+
+.btn3:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #262626;
+    transition:all 1s;
+    transform:rotateX(90deg);
+    z-index: -1;
+}
+.btn3:after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #262626;
+    transition:all 1s;
+    transform:rotateY(90deg);
+    z-index: -1;
+}
+
+.btn3:hover:before{
+     transform:rotateX(0deg);
+}
+.btn3:hover:after{
+     transform:rotateY(0deg);
+}
+
+
+.btn3:hover{
+    color:#fff;
+}
+
+
+
+
+.btn4{
+   position: relative;
+   overflow: hidden;
+}
+
+.btn4:before{
+    content: "YEAH!";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color:red;
+    transition: all 1s;
+    transform: translateY(-100%);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:#fff;
+
+    
+}
+
+.btn4:hover:before{
+    transform: translateY(0);
+}
+
+
+.btn5{
+    position: relative;
+    transition: all 1s;
+    overflow: hidden;
+}
+
+.btn5:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 30px;
+    background-color: white;
+    transition: all 1s;
+    transform:  translateX(-100%) rotate(45deg);
+}
+
+.btn5:hover{
+    background-color: red;
+    color: #fff;
+}
+
+.btn5:hover:before{
+    transform:translateX(100%) rotate(45deg);
+}
+
+
+.btn6{
+    position: relative;
+    transition: all 1s;
+    color:transparent;
+    overflow: hidden;
+}
+
+
+.btn6:before{
+    content: "Hover Me 6";
+    position:absolute;
+    top: 0;
+    left: 0;
+    background-color:rgb(121, 177, 126);
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    display:flex;
+    color:#262626;
+    justify-content:center;
+    align-items:center;
+    transition: all 1s;
+    
+}
+
+.btn6:after{
+    content: "Hover Me 6";
+    position:absolute;
+    top: 0;
+    left: 0;
+    color:#262626;
+    background-color:rgb(121, 177, 126);
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    transition: all 1s;
+    transform:translate(-100% , 100%);
+}
+
+.btn6:hover:before{
+    transform:translate(100% , -100%);
+}
+.btn6:hover:after{
+    transform:translate(0 , 0);
+}
+
+
+
+
+.btn7{
+    position: relative; 
+    overflow: hidden;
+}
+
+.btn7:before{
+    content: "Hover Me 7";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #272727;
+    color: #fff;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    transform: scale(5);
+    opacity: 0;
+    transition: all 0.5s;
+    border :5px solid #272727;
+}
+
+
+.btn7:hover:before{
+    transform:scale(1);
+    opacity:1;
+}
+
+
+.btn8{
+    border:2px solid rgb(209, 80, 80);
+    font-family: bold;
+    color: rgb(209, 80, 80);
+    position:relative;
+    transition:all 1s;
+    overflow: hidden;
+}
+
+.btn8:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color:  rgb(209, 80, 80);
+    z-index: -1;
+    transition:all 1s;
+    transform: translateY(-100%);
+    border:2px solid rgb(209, 80, 80);
+    border-radius: 0 0 50% 50%;
+}
+
+.btn8:hover{
+    color: white;
+}
+
+.btn8:hover:before{
+    transform: translateY(0);
+    border-radius:0;
+}
+
+
+
+.btn9{
+    background-color:rgb(252, 252, 24);
+    border: none;
+    position: relative;
+}
+
+.btn9:before{
+    content: "Hover Me 9";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color:  rgb(106, 161, 69);
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    transform:rotateX(270deg);
+    transform-origin: top;
+    transition: all 0.5s;
+
+}
+
+
+.btn9:after{
+    content: "Hover Me 9";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color:  rgb(238, 71, 29);
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    transform:rotateX(270deg);
+    transform-origin: top;
+    transition: all 0.5s;
+    transition-delay: 0.3s;
+
+}
+.btn9:hover:before{
+    transform: rotateX(0);
+}
+.btn9:hover:after{
+    transform: rotateX(0);
+}
+
+
+.btn10{
+    border :4px solid rgb(167, 167, 24);
+    color: rgb(241, 241, 19);
+    position: relative;
+}
+
+.btn10:before{
+    content: "Hover Me 10";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color:  rgb(90, 87, 87);
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    transition: all 1s;
+}
+.btn10:after{
+    content: "Hover Me 10";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color:  rgb(90, 87, 87);
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    transition: all 1s;
+    transform:scale(0) rotateY(0deg);
+}
+
+.btn10:hover:before{
+    left:100%;
+    transform:scale(0) rotateY(360deg);
+    opacity: 0;
+}
+
+.btn10:hover:after{
+    left:0;
+    transform:scale(1) rotateY(360deg);
+    opacity: 1;
+}
+
+
+.btn11{
+   position:relative;
+   transition: all 0.2s;
+    border: none;
+    color:#fff;
+}
+
+
+.btn11:before{
+    content: "";
+    position: absolute;
+    top: -3px;
+    left:-3px;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-color:  rgb(62, 110, 155);
+    mix-blend-mode: multiply;
+    transition: all 0.2s;
+    transform-origin: top;
+}
+.btn11:after{
+    content: "";
+    position: absolute;
+    top: 3px;
+    left:3px;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    mix-blend-mode: multiply;
+    background-color:  rgb(207, 121, 94);
+    transition: all 0.2s;
+    transform-origin: bottom;
+}
+
+.btn11:hover:before{
+        top: -6px;
+        left:0;
+        transform:perspective(1000px) rotateX(75deg)
+}
+.btn11:hover:after{
+        top: 6px;
+        left:0;
+        transform:perspective(1000px) rotateX(-75deg)
+}
+
+.btn11:hover{
+    color: #000;
+}
+
+
+
+.btn12{
+    position: relative;
+    text-transform: uppercase;
+    color:#f6b93b;
+    border: 3px solid #f6b93b;
+    transition: all 0.5s;
+   overflow: hidden;
+}
+
+.btn12:before,.btn12:after ,.btn12 span:before, .btn12 span:after{
+    
+    content: "";
+    position: absolute;
+  
+    width: 25%;
+    height: 100%;
+    background-color: #f6b93b;
+    z-index: -1;
+    transition: all 0.5s;
+}
+
+.btn12:before{
+     top: 0;
+    left:-25%;
+}
+.btn12:after{
+     top: -100%;
+    left:25%;
+}
+
+.btn12:hover:before{
+    top: 0;
+    left:0;
+}
+.btn12:hover:after{
+    top: 0;
+    left:25%;
+}
+
+.btn12 span:before{
+    top: 0;
+    right:-25%;
+    /* transition-delay: 0.2s; */
+}
+.btn12 span:after{
+    bottom: -100%;
+    right: 25%;
+    
+}
+
+.btn12:hover span:before{
+    top: 0;
+    right: 0;
+  
+}
+.btn12:hover span:after{
+    top: 0;
+    right:25%;
+   
+}
+
+.btn12:hover{
+    color:#222;
+}
+
+
+
+.btn13{
+    border: none;
+   
+     position: relative;
+     /* height: 60px;
+     width:200px; */
+}
+
+.btn13:before{
+    content: "";
+    top: -20px;
+    left: 0;
+    position: absolute;
+    height: 120px;
+    width:100%;
+    padding: 0;
+    border-left:  2px solid red;
+    border-right: 2px solid rgb(223, 223, 32); 
+    /* background-color: red; */
+    transition: all 0.4s;
+}
+
+.btn13:after{
+    content: "";
+    position: absolute;
+    height: 60px;
+    width: 300px;
+    top: 0;
+    left: -20px;
+    border-top: 2px solid red;
+    border-bottom: 2px solid rgb(223, 223, 32);
+    transition: all 0.4s;
+    transition-delay: 0.4s;
+
+}
+
+.btn13:hover:before{
+    transform: rotateY(180deg);
+}
+.btn13:hover:after{
+    transform: rotateX(180deg);
+}
+
+
+.btn14{
+    background-color:orange;
+    color: rgb(27, 27, 27);
+    border: none;
+    position: relative;
+}
+
+.btn14:before{
+    content: "";
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    top:-5px;
+    left:-5px;
+    /* background-color:red; */
+    border-top: 2px solid orange;
+    border-left: 2px solid orange;
+    transition: all 0.2s
+}
+.btn14:after{
+    content: "";
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    bottom:-5px;
+    right:-5px;
+    /* background-color:red; */
+    border-bottom: 2px solid orange;
+    border-right: 2px solid orange;
+    transition: all 0.2s
+}
+
+
+.btn14:hover:before{
+    height: 100%;
+    width: 100%;
+}
+.btn14:hover:after{
+    height: 100%;
+    width: 100%;
+}
+
+
+.btn15{
+    position: relative;
+    color: rgb(36, 35, 35);
+    transition: all 0.4s;
+}
+
+
+.btn15:before{
+    content:"";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color:#000;
+    z-index: -1;
+    opacity: 0;
+    transition: all 0.4s;
+    
+}
+
+.btn15 span:before {
+    transition: all 0.4s;
+}
+
+
+.btn15:hover:before{
+    transform: rotate(15deg);
+    opacity:1;
+}
+
+
+.btn15:hover span{
+    font-size: 3rem;
+  
+}
+
+.btn15:hover{ 
+    color:#fff;
+}
+
+
+.btn16{
+    border:none;
+    position: relative;
+    overflow: hidden;
+    
+}
+
+.btn16:before{
+    content: "";
+    position: absolute;
+    top:0;
+    left: -100%;
+    width: 100%;
+    height: 4px;
+    background-color:#256;
+    transition:all 0.5s;
+}
+.btn16:after{
+    content: "";
+    position: absolute;
+    bottom:0;
+    right:-100%;
+    width: 100%;
+    height: 4px;
+    background-color:#256;
+    transition:all 0.5s;
+}
+
+.btn16 span:before {
+    content: "";
+    position: absolute;
+    width:4px;
+    height: 100%;
+    top:-100%;
+    right: 0;
+    background-color:rgb(114, 103, 103);
+    transition:all 0.5s;
+}
+.btn16 span:after {
+    content: "";
+    position: absolute;
+    width:4px;
+    height: 100%;
+    bottom:-100%;
+    left: 0;
+    background-color:rgb(114, 103, 103);
+    transition:all 0.5s;
+}
+
+.btn16:hover:before{
+    left:0;
+}
+.btn16:hover:after{
+    right:0;
+}
+
+.btn16:hover span:before{
+    top:0;
+}
+
+.btn16:hover span:after{
+    bottom:0;
+}
+
+
+.btn17{
+    /* border:2px solid blue; */
+    position: relative;
+    /* color:blue; */
+    transition: all 0.5s;
+    border:none;
+}
+
